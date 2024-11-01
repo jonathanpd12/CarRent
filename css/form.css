@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* HEADER DAN NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.nav-sign-in {
+  color: #000;
+  display: flex;
+  font-size: 19px;
+  padding: 8px 18px;
+  border-radius: 15px;
+  background: blanchedalmond;
+  border: 1px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.nav-sign-in:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for sub-menu */
+.nav-profile ul.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-profile ul.sub-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.nav-profile ul.sub-menu li a {
+  color: #000;
+  margin-left: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.3s ease;
+}
+  
+.nav-profile ul.sub-menu li a:hover {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.nav-profile:hover ul.sub-menu {
+  display: block;
+}
+
+/* Style for main profile dropdown and sub-menu items */
+.nav-profile,
+.nav-profile ul.sub-menu li a {
+  /* Consistent styling for dropdown and sub-menu items */
+  padding: 12px 16px;
+}
+
+.nav-profile {
+  position: relative; /* Required for correct sub-menu positioning */
+}
+
+.nav-profile i.fas.fa-caret-down {
+  /* Adjust icon positioning for better alignment */
+  margin-left: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  background-color: #333; /* Ubah sesuai skema desain */
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+  color: #333; 
+  background-color : rgba(255, 255, 255, 0.3);
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover,
+footer a:hover {
+  color: burlywood;
+}
+
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+/* Form */
+form {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.container h2 {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid burlywood;
+} 
+
+/* Label */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Input readonly */
+input[readonly] {
+  background-color: #f6f6f6;
+}
+
+/* Tombol submit */
+input[type="submit"] {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: burlywood;
+  color: #fff;
+  border: 1px solid burlywood;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Tombol submit hover */
+input[type="submit"]:hover {
+  background-color: #b28452;
+}
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding: 20px 0;
+  }
+  
+  footer div {
+    container: auto;
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer span {
+    color: #fff;
+  }
+  
+  footer a {
+    padding: 0;
+    height: 0;
+  }
+  
+  .contact .row {
+    flex-direction: column;
+  }
+  
+  .contact .row .col {
+    width: 100%;
+  }
+  
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+  
+
+/* Responsive */
+@media (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .nav-sign-in {
+    color: #000;
+    font-size: 19px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background: blanchedalmond;
+    display: inline-block;
+    width: auto;
+  }
+
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked ~ .all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+}

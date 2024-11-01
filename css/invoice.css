@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f9fa;
+}
+
+  /* Body */
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333; /* Menggunakan warna #333 untuk teks */
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: 50px auto; /* Margin yang lebih besar untuk memberikan ruang di sekitar konten */
+    padding: 20px;
+    background-color: #fff; /* Warna latar belakang yang konsisten */
+    border-radius: 10px; /* Sudut elemen yang lebih melengkung */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6); /* Efek bayangan untuk memberikan kedalaman */
+  }
+  
+  /* Header */
+  .header {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: burlywood; /* Menggunakan warna burlywood untuk background header */
+  }
+
+  .header h1 {
+    color: #f2f2f2;
+    display: flex;
+    padding-left: 5px;
+    text-align: center;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Menggunakan warna #333 untuk teks header */
+  }
+  
+  .header p {
+    margin: 5px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Item */
+  .item {
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .item p {
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* Total */
+  .total {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .total p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .submit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: burlywood;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .submit:hover {
+    background-color: #444;
+  }
+  
+
+  @media (min-width: 768px) {
+    /* Style untuk desktop */
+    .container {
+      max-width: 1200px;
+    }
+    
+    .item p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Style untuk mobile */
+    .container {
+      max-width: 480px;
+    }
+    
+    .item p {
+      font-size: 16px;
+    }
+  }
+  
+  

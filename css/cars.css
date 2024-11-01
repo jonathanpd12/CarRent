@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* Searching Bar */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 250px;
+}
+
+section .cars1 .crossover {
+  margin-bottom: 100px;
+}
+
+/* HEADER DAN NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.nav-sign-in {
+  color: #000;
+  display: flex;
+  font-size: 19px;
+  padding: 8px 18px;
+  border-radius: 15px;
+  background: blanchedalmond;
+  border: 1px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.nav-sign-in:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for sub-menu */
+.nav-profile ul.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-profile ul.sub-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.nav-profile ul.sub-menu li a {
+  color: #000;
+  margin-left: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.3s ease;
+}
+  
+.nav-profile ul.sub-menu li a:hover {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.nav-profile:hover ul.sub-menu {
+  display: block;
+}
+
+/* Style for main profile dropdown and sub-menu items */
+.nav-profile,
+.nav-profile ul.sub-menu li a {
+  padding: 12px 16px;
+}
+
+.nav-profile {
+  position: relative; 
+}
+
+.nav-profile i.fas.fa-caret-down {
+  margin-left: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+  color: #333; 
+  background-color : rgba(255, 255, 255, 0.3);
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover,
+footer a:hover {
+  color: burlywood;
+}
+
+    /* CARS CARDS */
+.cars {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 10px;
+}
+
+.cars1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0 10px;
+}
+
+
+/* CSS untuk kelas .cars .sedan */
+.cars .sedan {
+  padding: 30px 0 30px;
+}
+
+/* CSS untuk kelas .cars1 .sedan */
+.cars1 .sedan {
+  padding: 30px 0 30px;
+}
+
+/* CSS untuk kelas .cars1 .hatchback */ 
+.cars1 .hatchback {
+  padding: 30px 0 50px;
+}
+
+/* CSS untuk kelas .cars1 .suv */
+.cars1 .suv {
+  padding: 30px 0 30px;
+}
+
+/* CSS untuk kelas .cars1 .mpv */
+.cars1 .mpv {
+  padding: 30px 0 30px;
+}
+
+/* CSS untuk kelas .cars1 .citycars */
+.cars1 .citycars {
+  padding: 30px 0 30px;
+}
+
+/* CSS untuk kelas .cars1 .crossover */
+.cars1 .crossover {
+  padding: 30px 0 80px;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.card {
+  flex-basis: 25%;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 45%;
+  max-width: 300px;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 60px 40px rgb(0, 0, 0, 0.2);
+}
+
+.card img {
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+}
+
+.card h2 {
+  font-size: 22px;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(0 0 0 / 90%);
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0 0 0 / 70%);
+  margin-bottom: 24px;
+}
+
+.card a {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  font-size: 18px;
+  padding: 10px 10px;
+  background-color: #333;
+  border: 2px solid #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.card a:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 45, 112, 0.8);
+}
+
+
+    /* Animasi untuk kartu mobil */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.);
+}
+
+    /* Crossover */
+section.cars1 .crossover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 100px; 
+}
+
+section.cars1 .crossover {
+  text-align: center;
+  padding: 30px 0 30px;
+}
+
+section.cars1-crossover .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.cars1-crossover .card {
+  flex-basis: calc(33.33% - 20px); 
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+section.cars1-crossover .card img {
+  max-width: 250px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+section.cars1-crossover .card h2 {
+  font-size: 22px;
+}
+
+section.cars1-crossover .card h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(0 0 0 / 90%);
+}
+
+section.cars1-crossover .card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0 0 0 / 70%);
+  margin-bottom: 24px;
+}
+
+section.cars1-crossover .card a {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  font-size: 18px;
+  padding: 10px 10px;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+section.cars1-crossover .card a:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+section.cars1-crossover .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 45, 112, 0.8);
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0; 
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+  height: 0;
+}
+    /* Animasi */
+.card {
+  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a:hover {
+  animation: pulse 1s ease infinite;
+}
+
+/* Animasi untuk cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi untuk tombol "Details" */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+    
+@media screen and (max-width: 860px) {
+  .nav-sign-in {
+    color: #000;
+    font-size: 19px;
+    padding: 8px 12px; 
+    border-radius: 15px;
+    background: blanchedalmond;
+    display: inline-block;
+    width: auto;
+  }
+
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked ~ .all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

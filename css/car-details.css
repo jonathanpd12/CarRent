@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    burlywood, #333
+  );
+}
+
+/* HEADER DAN NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.nav-sign-in {
+  color: #000;
+  display: flex;
+  font-size: 19px;
+  padding: 8px 18px;
+  border-radius: 15px;
+  background: blanchedalmond;
+  border: 1px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.nav-sign-in:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for sub-menu */
+.nav-profile ul.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-profile ul.sub-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.nav-profile ul.sub-menu li a {
+  color: #000;
+  margin-left: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.3s ease;
+}
+  
+.nav-profile ul.sub-menu li a:hover {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.nav-profile:hover ul.sub-menu {
+  display: block;
+}
+
+/* Style for main profile dropdown and sub-menu items */
+.nav-profile,
+.nav-profile ul.sub-menu li a {
+  /* Consistent styling for dropdown and sub-menu items */
+  padding: 12px 16px;
+}
+
+.nav-profile {
+  position: relative; /* Required for correct sub-menu positioning */
+}
+
+.nav-profile i.fas.fa-caret-down {
+  /* Adjust icon positioning for better alignment */
+  margin-left: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  background-color: #333; /* Ubah sesuai skema desain */
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+  color: #333; 
+  background-color : rgba(255, 255, 255, 0.3);
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover,
+footer a:hover {
+  color: burlywood;
+}
+
+/* Style for section containing car details */
+.car-details {
+  max-width: 1100px;
+  margin: 100px auto;
+}
+
+.container {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.product-img {
+  margin-left: 10px;
+  object-fit: cover;
+  min-height: 100% ;
+  min-width: 100%;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: inherit;
+  transition: all 0.5s ease;
+}
+
+
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-title{
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+
+.product-title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #12263a;
+}
+
+.product-price{
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-detail h2{
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+
+
+.product-detail p{
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.product-detail ul{
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.product-detail ul li{
+  margin: 0;
+  list-style: none;
+  background: url(../images/checked.png) left center no-repeat;
+  background-size: 18px;
+  padding-left: 1.7rem;
+  margin: 0.4rem 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.product-detail ul li span{
+  font-weight: 400;
+}
+
+/* Style for rent button link */
+.product-content a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  width: 150px;
+  font-size: 18px;
+  padding: 10px 10px;
+  background-color: #333;
+  border: 2px solid #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px auto;
+}
+
+/* Style for rent button link on hover */
+.product-content a:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+    /* FOOTER */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+  height: 0;
+}
+
+@media screen and (max-width: 860px) {
+    .nav-sign-in {
+      color: #000;
+      font-size: 19px;
+      padding: 8px 12px; 
+      border-radius: 15px;
+      background: blanchedalmond;
+      display: inline-block;
+      width: auto;
+    }
+  
+    .navbar .all-links {
+      position: fixed;
+      left: -100%;
+      width: 300px;
+      display: block;
+      height: 100vh;
+      top: 75px;
+      background: #333;
+      transition: left 0.3s ease;
+    }
+  
+    .navbar #menu-toggler:checked ~ .all-links {
+      left: 0;
+    }
+  
+    .navbar .all-links li {
+      font-size: 18px;
+    }
+  
+    .navbar #hamburger-btn {
+      display: block;
+    }
+  
+    section > p {
+      text-align: center;
+    }
+  
+    section .cards .card {
+      width: calc(100% / 2 - 15px);
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 992px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .car-details{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-img{
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}

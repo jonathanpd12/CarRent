@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* HEADER DAN NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.nav-sign-in {
+  color: #000;
+  display: flex;
+  font-size: 19px;
+  padding: 8px 18px;
+  border-radius: 15px;
+  background: blanchedalmond;
+  border: 1px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.nav-sign-in:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for sub-menu */
+.nav-profile ul.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-profile ul.sub-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.nav-profile ul.sub-menu li a {
+  color: #000;
+  margin-left: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.3s ease;
+}
+  
+.nav-profile ul.sub-menu li a:hover {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.nav-profile:hover ul.sub-menu {
+  display: block;
+}
+
+/* Style for main profile dropdown and sub-menu items */
+.nav-profile,
+.nav-profile ul.sub-menu li a {
+  /* Consistent styling for dropdown and sub-menu items */
+  padding: 12px 16px;
+}
+
+.nav-profile {
+  position: relative; /* Required for correct sub-menu positioning */
+}
+
+.nav-profile i.fas.fa-caret-down {
+  /* Adjust icon positioning for better alignment */
+  margin-left: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  background-color: #333; /* Ubah sesuai skema desain */
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover{
+  color: #333; 
+  background-color : rgba(255, 255, 255, 0.3);
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover,
+footer a:hover {
+  color: burlywood;
+}
+
+    /* ANIMATION */
+/* Animasi untuk judul */
+.services h2 {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+/* Animasi untuk deskripsi */
+.services p {
+  animation: slideInRight 1s ease-in-out;
+}
+
+/* Animasi untuk kartu layanan */
+.cards .card {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframes untuk animasi */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+  /* SERVICES CARDS */
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  section > p {
+    text-align: center;
+  }
+  
+  section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  
+  section .cards .card {
+    background: #fff;
+    padding: 40px 15px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    margin-bottom: 40px;
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+  }
+  
+  .cards .card {
+    padding: 0 0 20px;
+  }
+  
+  .services .card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 45%;
+    object-fit: cover;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Hover effect on service cards */
+  .services .card:hover {
+    background-color: burlywood; 
+    opacity: 0.6; 
+    transition: background-color 0.5s ease, opacity 0.5s ease; 
+    box-shadow: 0px 20px 38px rgba(4, 147, 243, 0.4); 
+  }
+  
+  .services .card:hover h3 {
+    color: #ffffff; 
+    transition: color 0.5s ease; 
+  }
+  
+  .services .card:hover p {
+    color: #ffffff; 
+    transition: color 0.5s ease; 
+  }
+  
+  .services .card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%; 
+    object-fit: cover;
+    box-shadow: 0px 4px 50px rgba(241, 181, 51, 0.4);
+    filter: brightness(1.5);
+    transition: filter 0.5s ease; 
+  }
+  
+  .services .card:hover img {
+    filter: invert(1); 
+    transition: filter 0.5s ease; 
+  }
+  
+  .cards .card p {
+    padding: 0 15px;
+    margin-top: 5px;
+  }
+  
+    /* FOOTER */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  container: auto;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+  height: 0;
+}
+
+    /*  */
+@media screen and (max-width: 860px) {
+  .nav-sign-in {
+    color: #000;
+    font-size: 19px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background: blanchedalmond;
+    display: inline-block;
+    width: auto;
+  }
+
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked ~ .all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
